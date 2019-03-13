@@ -20,7 +20,7 @@ public class WeaponConfig : ScriptableObject {
     public int          GetMagazineCapacity()   => magazineCapacity;
     public int          GetReloadTime()         => reloadTime;
     public float        GetFireRate()           => fireRate;
-    public float        GetBulletSpeed()        => bulletSpeed;
+    public float        GetProjectileSpeed()        => bulletSpeed;
     public int          GetParticlesPerShot()   => particlesPerShot;
     public int          GetDamagePerParticle()  => damagePerParticle;
 

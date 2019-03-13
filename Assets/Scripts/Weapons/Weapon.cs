@@ -7,8 +7,8 @@ public abstract class Weapon : MonoBehaviour {
     [SerializeField] protected ParticleSystem ps;
 
     protected float nextFireTime;
-    protected bool isReloading;
-    protected int currentAmmoInMagazine;
+    [SerializeField] protected bool isReloading;
+    [SerializeField] protected int currentAmmoInMagazine;
 
     protected ParticleSystem.Particle[] particles;
 
@@ -16,4 +16,5 @@ public abstract class Weapon : MonoBehaviour {
 	public abstract void TryShoot(Vector3 mouseWorldPos);
     public abstract void MakeShoot(Vector3 mouseWorldPos);
     public abstract void Reload();
+    public abstract void ParticleHit();
 }

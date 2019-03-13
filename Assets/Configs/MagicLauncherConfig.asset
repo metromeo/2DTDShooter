@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44bb9fffad39b148b0ba0feb3e0b5d4, type: 3}
   m_Name: MagicLauncherConfig
   m_EditorClassIdentifier: 
-  magazineCapacity: 1
-  reloadTime: 0
-  fireRate: 1
-  bulletSpeed: 5
+  magazineCapacity: 3
+  reloadTime: 2
+  fireRate: 0.2
+  bulletSpeed: 15
   particlesPerShot: 1
   damagePerParticle: 1
