@@ -7,8 +7,8 @@ public static class PlayerInputInterpretator  {
 
     public static event Action<float, float> OnMove = delegate { };
     public static event Action<Vector3> OnRotate = delegate { };
-    public static event Action<Vector3> OnLeftMouseDown = delegate { };
-    public static event Action<Vector3> OnRightMouseDown = delegate { };
+    public static event Action OnLeftMouseDown = delegate { };
+    public static event Action OnRightMouseDown = delegate { };
 
 
     public static void Move(float hor, float ver) {
@@ -19,12 +19,12 @@ public static class PlayerInputInterpretator  {
         OnRotate(mouseWorldPos);
     }
 
-    public static void LeftMouseDown(Vector3 mouseWorldPos) {
-        OnLeftMouseDown(mouseWorldPos);
+    public static void LeftMouseDown() {
+        OnLeftMouseDown();
     }
 
-    public static void RightMouseDown(Vector3 mouseWorldPos) {
-        OnRightMouseDown(mouseWorldPos);
+    public static void RightMouseDown() {
+        OnRightMouseDown();
     }
 	
 }

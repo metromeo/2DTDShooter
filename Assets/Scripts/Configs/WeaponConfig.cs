@@ -4,8 +4,6 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Weapon config", menuName = "Configs/Create new Weapon config")]
 public class WeaponConfig : ScriptableObject {
-    //[SerializeField] private WeaponType weaponType;
-    //[SerializeField] private Material bulletMaterial;
 
     [SerializeField] private int magazineCapacity;
     [SerializeField] private int reloadTime; //ms
@@ -15,8 +13,6 @@ public class WeaponConfig : ScriptableObject {
     [SerializeField] private int damagePerParticle;
 
 
-    //public WeaponType   GetWeaponType()         => weaponType;
-    //public Material     GetMaterial()           => bulletMaterial;
     public int          GetMagazineCapacity()   => magazineCapacity;
     public int          GetReloadTime()         => reloadTime;
     public float        GetFireRate()           => fireRate;

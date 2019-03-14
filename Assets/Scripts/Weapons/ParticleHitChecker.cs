@@ -14,10 +14,7 @@ public class ParticleHitChecker : MonoBehaviour {
 
     void OnParticleCollision(GameObject other) {
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-        Debug.Log("Q = " + numCollisionEvents);
-        Debug.Log("Particle hit GO, other = " + other.name);
-        weapon.ParticleHit();
-        //TMPBodyPart tmph = other.GetComponent<TMPBodyPart>();
-        //tmph?.SendHitEvent(numCollisionEvents * weapon.GetDamagePerParticle());
+        IHaveHealth target = other.transform.parent.GetComponent<IHaveHealth>();
+        target?.ModifyHealth(numCollisionEvents * weapon.GetDamagePerParticle());
     }
 }

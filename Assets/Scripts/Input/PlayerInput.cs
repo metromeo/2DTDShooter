@@ -23,9 +23,8 @@ public class PlayerInput : MonoBehaviour {
     }
 
     void ReadMouse() {
-        if (EventSystem.current.IsPointerOverGameObject())    // is the touch on the GUI
+        if (EventSystem.current.IsPointerOverGameObject())  
         {
-            Debug.Log("UI");
             return;
         }
 
@@ -37,10 +36,10 @@ public class PlayerInput : MonoBehaviour {
         }
         PlayerInputInterpretator.Rotate(mouseWorldPos);
         if (Input.GetMouseButton(0)) {
-            PlayerInputInterpretator.LeftMouseDown(mouseWorldPos);
+            PlayerInputInterpretator.LeftMouseDown();
         }
         if (Input.GetMouseButton(1)) {
-            PlayerInputInterpretator.RightMouseDown(mouseWorldPos);
+            PlayerInputInterpretator.RightMouseDown();
         }
     }
 }

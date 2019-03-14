@@ -37,11 +37,11 @@ public class WeaponsControl : MonoBehaviour {
         PlayerInputInterpretator.OnRightMouseDown -= ShootRight;
     }
 
-    void ShootLeft(Vector3 mouseWorldPos) {
-        leftWeapon.TryShoot(mouseWorldPos);
+    void ShootLeft() {
+        leftWeapon.TryShoot();
     }
-    void ShootRight(Vector3 mouseWorldPos) {
-        rightWeapon.TryShoot(mouseWorldPos);
+    void ShootRight() {
+        rightWeapon.TryShoot();
     }
 
 }

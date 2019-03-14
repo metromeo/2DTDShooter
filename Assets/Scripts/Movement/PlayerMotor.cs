@@ -36,7 +36,7 @@ public class PlayerMotor : MonoBehaviour {
     }
 
     void Rotate(Vector3 mouseWorldPos) {
-        me.LookAt(mouseWorldPos);
+        me.LookAtXIgnored2D(mouseWorldPos);
     }
 
 	
